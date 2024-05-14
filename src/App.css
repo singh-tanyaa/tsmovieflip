@@ -1,0 +1,89 @@
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.movie-card {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  perspective: 1000px;
+}
+
+.movie-card .front, .movie-card .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.movie-card .front {
+  transform: rotateY(0deg);
+}
+
+.movie-card .back {
+  transform: rotateY(180deg);
+}
+
+.movie-card.flipped .front {
+  transform: rotateY(-180deg);
+}
+
+.movie-card.flipped .back {
+  transform: rotateY(0deg);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-card .back {
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.movie-card .back h2 {
+  margin-top: 0;
+}
+
+.movie-card .back button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
